@@ -1,0 +1,23 @@
+<view wx:for="{{fileCategories}}" wx:key="1" wx:if="{{!isNull&&!isError}}">
+<i-title title="{{item.category}}">
+  <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{item.files}}" wx:for-item="image" wx:key="2">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+            </view>
+          </block>
+        </view>
+        </view>
+</i-title>
+</view>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../image/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../image/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">图纸为空</view>
+</view>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "领料",
+  "usingComponents": {
+    "van-submit-bar": "../../dist/submit-bar/index",
+    "van-checkbox": "../../dist/checkbox/index",
+    "van-checkbox-group": "../../dist/checkbox-group/index",
+    "van-card": "../../dist/card/index",
+    "van-tag": "../../dist/tag/index",
+    "van-button": "../../dist/button/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
+}

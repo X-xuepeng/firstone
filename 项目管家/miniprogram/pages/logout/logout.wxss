@@ -1,0 +1,6 @@
+.logout{
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  opacity:1;
+}

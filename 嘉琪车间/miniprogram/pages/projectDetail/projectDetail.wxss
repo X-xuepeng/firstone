@@ -1,0 +1,13 @@
+/* miniprogram/pages/projectDetail/projectDetail.wxss */
+.hide {
+  display:none
+}
+.bottom {
+  padding-bottom: 80px;
+}
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  opacity:1;
+}

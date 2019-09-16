@@ -1,0 +1,15 @@
+<i-title title="权限">
+  <i-grid-item-one bindtap='sendMaterial'>
+    <i-grid-icon>
+      <image src="../../images/zhucai.png" />
+    </i-grid-icon>
+    <i-grid-label>主材送货单</i-grid-label>
+  </i-grid-item-one>
+
+   <i-grid-item-one bindtap="uploadPicture">
+    <i-grid-icon>
+      <image src="../../images/project_check.png" />
+    </i-grid-icon>
+    <i-grid-label>{{project_check}}</i-grid-label>
+  </i-grid-item-one>
+</i-title>

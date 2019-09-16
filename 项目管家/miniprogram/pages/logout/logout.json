@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "退出登录",
+  "usingComponents": {
+    "van-button": "../../dist/button/index"
+  }
+}

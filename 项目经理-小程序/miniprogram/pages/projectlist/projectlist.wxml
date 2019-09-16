@@ -1,0 +1,45 @@
+<view style='padding:2%' wx:for="{{projects}}" wx:key="{{item.id}}" wx:if="!{{isNull}}&&!{{isError}}">
+  <view id='{{item.id}}' class="i-card" bindtap='project'>
+
+    <view id='{{item.id}}' class='padding' catchtap='location'>
+      <image src='../../image/address.png' class='i-address-image'></image>
+      <text class='i-font-text'>{{item.address}}-{{item.buildingType}}</text>
+    </view>
+
+    <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../image/name.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.name}}</text>
+      </view>
+
+      <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../image/phone.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.phoneNumber}}</text>
+      </view>
+    </view>
+
+    <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../image/area.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.area}}平方米</text>
+      </view>
+
+      <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../image/order-time.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.createTime}}</text>
+      </view>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../image/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../image/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">项目列表为空</view>
+</view>

@@ -1,0 +1,65 @@
+<view class='bottom'>
+ <i-panel title="工艺选择">
+  <i-tag wx:for="{{tags}}" wx:key="{{index}}" bindchange="onChange" checkable="{{true}}" name="{{index}}" color="{{item.color}}" checked="{{item.checked}}" type="border" style="margin-right:5px;margin-left:5px">
+    {{item.name}}
+  </i-tag>
+ </i-panel>
+
+
+ <i-panel title="工人信息">
+    <i-input value="{{Name}}" title="工人" placeholder="名字" bindchange="Name"/>
+    <view class='border-bottom'></view>
+    <i-input  value="{{Phone}}" type="number" title="联系电话" placeholder="请输入手机号" bindchange="Phone"/>
+      
+ </i-panel>
+
+ <i-panel title="身份证">
+ <view class="weui-cell" style='border-bottom:1px solid #D5D5D6'>
+  <view class="weui-cell__bd">
+    <view class="weui-uploader">
+
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{IDCardList}}" wx:for-item="image" wx:key="1">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+            </view>
+          </block>
+        </view>
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ </i-panel>
+
+  <i-panel title="银行卡">
+ <view class="weui-cell" style='border-bottom:1px solid #D5D5D6'>
+  <view class="weui-cell__bd">
+    <view class="weui-uploader">
+
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{BankCardList}}" wx:for-item="image" wx:key="1">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="bankImage"></image>
+            </view>
+          </block>
+        </view>
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="bankChooseImage"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ </i-panel>
+
+  <i-panel title="备注资料">
+  <i-input value="{{ Remark }}" type="textarea" title="备注" placeholder="" maxlength="50" bindchange="Remark"/>
+ </i-panel>
+
+</view>
+<i-button bind:click="clickWorkerInfo" type="success"  size="large" class='bottom-button'>提交工人资料</i-button>

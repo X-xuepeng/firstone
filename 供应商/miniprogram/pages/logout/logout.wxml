@@ -1,0 +1,3 @@
+<view class='logout'>
+<button class='i-class i-btn i-btn-error i-btn-square i-btn-large' size="large"   hover-class="i-btn-hover" type="danger" bindtap="logout">退出登录</button>
+</view>

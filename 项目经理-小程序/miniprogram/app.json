@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/projectlist/projectlist",
+    "pages/functionlist/functionlist",
+    "pages/materiallist/materiallist",
+    "pages/shopcart/shopcart",
+    "dist/template/template",
+    "pages/fillworkerinfo/fillworkerinfo",
+    "pages/assign/assign",
+    "pages/assignwork/assignwork",
+    "dist/grid-item-one/index",
+    "dist/title/index",
+    "pages/projectInfo/projectInfo",
+    "pages/projectbudget/projectbudget",
+    "pages/drawing/drawing",
+    "pages/arrival/arrival",
+    "pages/file/file",
+    "pages/income/income",
+    "pages/showfile/showfile",
+    "pages/checker/checker",
+    "pages/roomprocess/roomprocess"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "项目经理登录",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f9f9f9"
+  }
+}

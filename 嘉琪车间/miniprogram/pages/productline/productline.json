@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "生产线",
+  "usingComponents": {
+    "van-button": "../../dist/button/index",
+      "van-dialog": "../../dist/dialog/index"
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../style/weui.wxss";
+
+.icon {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  margin-left: 50%;
+  top: 40px;
+  left: -40px;
+}
+.icon_container {
+    position: relative;
+    height: 120px;
+}
+
+.phone-top {
+    margin-top: 60rpx;
+}
+.color_primary {
+  color:#F6F6F6;
+}

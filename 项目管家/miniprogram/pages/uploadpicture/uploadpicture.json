@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "报检照片",
+  "usingComponents": {
+    "i-button": "../../dist/button/index"
+  }
+}

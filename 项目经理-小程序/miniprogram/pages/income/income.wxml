@@ -1,0 +1,7 @@
+<i-cell-group>
+  <i-cell title="发包价" value="￥{{funds.outContracting}}" is-link color="#c9302c"></i-cell>
+  <i-cell title="应收" value="￥{{funds.receivable}}" is-link color="#c9302c"></i-cell>
+  <i-cell title="实收" value="￥{{funds.actualReceipt}}" is-link color="#c9302c"></i-cell>
+  <i-cell title="应付" value="￥{{funds.payable}}" is-link color="#c9302c"></i-cell>
+   <i-cell title="实付" value="￥{{funds.actualPayment}}" is-link color="#c9302c"></i-cell>
+</i-cell-group>

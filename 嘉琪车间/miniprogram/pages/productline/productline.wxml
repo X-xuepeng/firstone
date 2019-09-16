@@ -1,0 +1,46 @@
+<view style='padding:2%' wx:for="{{machines}}" wx:key="{{item.Id}}">
+  <view id='{{item.Id}}' class="i-card">
+
+    <view id='{{item.Id}}' class='padding'>
+      <image src='../../images/compute_name.png' class='i-address-image'></image>
+      <text class='i-font-text'>{{item.MachineName}}</text>
+    </view>
+
+    <view>
+     <image src='../../images/ip.png'  class='i-customer-name padding'></image>
+      <text class='i-customer'>{{item.MachineIp}}</text>
+    </view>
+
+   <view>
+     <image src='../../images/detail.png'  class='i-customer-name padding'></image>
+      <text class='i-customer-detail'>{{item.Remark}}</text>
+    </view>
+
+    <view class="btn_position">
+      <van-button size="small" type="info" bind:click="updateProductLine" id='{{item.Id}}'>更新详情信息</van-button>
+     <van-button size="small" type="danger" bind:click="deleteProductLine" id='{{item.Id}}'>删除生产线</van-button>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>
+<van-dialog id="van-dialog" />
+
+ <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">更新描述</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" type="text" bindinput="inputChange" class="input" placeholder="更新描述信息" value="{{inputContent}}"></input>
+      </view>
+    </view>
+
+      <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+  </view>
+
+<view class='logout'>
+<button class='i-class i-btn i-btn-success i-btn-square i-btn-large' size="large"   hover-class="i-btn-hover" type="success" bindtap="createProductLine">创建生产线</button>
+</view>

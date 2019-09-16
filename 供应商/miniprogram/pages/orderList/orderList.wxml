@@ -1,0 +1,20 @@
+<view wx:if="!{{isNull}}&&!{{isError}}">
+  <view wx:for="{{orderList}}" class="weui-cells weui-cells_after-title" wx:key="{{item.Address}}">
+    <view id="{{item.id}}" class="weui-cell weui-cell_access" bindtap='orderDetail'> 
+      <view class="weui-cell__bd">{{item.Address}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+        <view style="display: inline-block;vertical-align:middle; font-size: 18px;color:{{item.color}}">{{item.type}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../images/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../images/list_empty.png" class="empty_size"></image>
+    <view style="font-size:12px;color:gary">主材送货单列表为空</view>
+</view>

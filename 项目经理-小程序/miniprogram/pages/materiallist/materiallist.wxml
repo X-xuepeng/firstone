@@ -1,0 +1,13 @@
+<view class='padding bottom' >
+<view class='i-class i-cell isLastCell isLink' wx:for="{{resources}}" wx:key="item.id" style='background-color:#fff'>
+<view class='i-cell-bd'>
+  <view class='fl'>
+      <view class='i-cell-text' style='font-size:28rpx'>{{item.name}}</view>
+       <view class='i-cell-desc' style='font-size:26rpx;color:#e64340;margin-top:4rpx'>￥{{item.unitPrice}}</view>
+  </view>
+  <image class='i-cell-icon' id='{{item.id}}'  src='../../image/cart.png' class='fr' bindtap='addCart'>
+  </image>
+</view>
+</view>
+</view>
+ <i-button bind:click="shopcart" type="success"  size="large" class='bottom-button'>进入购物车</i-button>

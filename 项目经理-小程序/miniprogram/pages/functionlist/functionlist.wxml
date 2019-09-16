@@ -1,0 +1,145 @@
+<!-- <i-title title="进场凭证">
+
+  <i-grid-item-one bindtap='picking'>
+    <i-grid-icon>
+      <image src="../../image/upload.png" />
+    </i-grid-icon>
+    <i-grid-label>上传凭证</i-grid-label>
+  </i-grid-item-one>
+
+</i-title> -->
+
+
+<i-title title="材料">
+  <!-- <i-grid>
+    <i-grid-item bindtap='picking'>
+      <i-grid-icon>
+        <image src="../../image/accept-order.png" />
+      </i-grid-icon>
+      <i-grid-label>下单</i-grid-label>
+    </i-grid-item>
+     <i-grid-item>
+      <i-grid-icon>
+        <image src="../../image/refuse-order.png" />
+      </i-grid-icon>
+      <i-grid-label>退单</i-grid-label>
+    </i-grid-item>
+    <i-grid-item> 
+      <i-grid-icon>
+        <image src="../../image/order-check.png" />
+      </i-grid-icon>
+      <i-grid-label>查看订单</i-grid-label>
+    </i-grid-item>
+  </i-grid> -->
+
+  <i-grid-item-one bindtap='picking'>
+    <i-grid-icon>
+      <image src="../../image/accept-order.png" />
+    </i-grid-icon>
+    <i-grid-label>下单</i-grid-label>
+  </i-grid-item-one>
+
+  <i-grid-item-one bindtap="arrival">
+    <i-grid-icon>
+      <image src="../../image/order-check.png" />
+    </i-grid-icon>
+    <i-grid-label>进场凭证</i-grid-label>
+  </i-grid-item-one>
+</i-title>
+
+<i-title title="工人">
+  <i-grid>
+    <i-grid-item bindtap="worker_info">
+      <i-grid-icon>
+        <image src="../../image/info.png" />
+      </i-grid-icon>
+      <i-grid-label>填写工人档案</i-grid-label>
+    </i-grid-item>
+    <i-grid-item bindtap="assign_worker">
+      <i-grid-icon>
+        <image src="../../image/worker.png" />
+      </i-grid-icon>
+      <i-grid-label>指派工人</i-grid-label>
+    </i-grid-item>
+    <!-- <i-grid-item>
+      <i-grid-icon>
+        <image src="../../image/worker_money.png" />
+      </i-grid-icon>
+      <i-grid-label>工人工费</i-grid-label>
+    </i-grid-item> -->
+  </i-grid>
+</i-title>
+
+<i-title title="预算" bindtap="project_money">
+  <i-grid-item-one>
+    <i-grid-icon>
+      <image src="../../image/预算.png" />
+    </i-grid-icon>
+    <i-grid-label>项目预算</i-grid-label>
+  </i-grid-item-one>
+
+</i-title>
+
+
+<i-title title="质检">
+
+  <i-grid-item-one bindtap="checker">
+    <i-grid-icon>
+      <image src="../../image/check.png" />
+    </i-grid-icon>
+    <i-grid-label>报检</i-grid-label>
+  </i-grid-item-one>
+
+  <i-grid-item-one bindtap="arrival">
+    <i-grid-icon>
+      <image src="../../image/upload.png" />
+    </i-grid-icon>
+    <i-grid-label>进场凭证</i-grid-label>
+  </i-grid-item-one>
+</i-title>
+
+<i-title title="项目文件">
+  <i-grid-item-one bindtap="drawing">
+    <i-grid-icon>
+      <image src="../../image/project_picture.png" />
+    </i-grid-icon>
+    <i-grid-label>图纸</i-grid-label>
+  </i-grid-item-one>
+
+  <i-grid-item-one bindtap="file">
+    <i-grid-icon>
+      <image src="../../image/文件.png" />
+    </i-grid-icon>
+    <i-grid-label>其他</i-grid-label>
+  </i-grid-item-one>
+</i-title>
+
+
+
+
+<i-title title="收支明细" bindtap="income">
+  <i-grid-item-one>
+    <i-grid-icon>
+      <image src="../../image/专项费预算.png" />
+    </i-grid-icon>
+    <i-grid-label>收支明细</i-grid-label>
+  </i-grid-item-one>
+</i-title>
+
+<i-title title="详情">
+  <i-grid-item-one bindtap="getProjectInfo">
+    <i-grid-icon>
+      <image src="../../image/detail.png" />
+    </i-grid-icon>
+    <i-grid-label>项目详情</i-grid-label>
+  </i-grid-item-one>
+</i-title>
+
+<i-title title="解绑">
+  <i-grid-item-one bindtap="unbind">
+    <i-grid-icon>
+      <image src="../../image/手机解绑.png" />
+    </i-grid-icon>
+    <i-grid-label>解除绑定</i-grid-label>
+  </i-grid-item-one>
+</i-title>

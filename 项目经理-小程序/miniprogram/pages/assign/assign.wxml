@@ -1,0 +1,13 @@
+<i-cell-group wx:for="{{p_Technologies}}" wx:key='item.id' wx:if="{{!isNull&&!isError}}">
+    <i-cell id="{{item.id}}" title="{{item.name}}" label="工程量：{{item.quantity}}{{item.unit}}" is-link bindtap='click'> </i-cell>    
+</i-cell-group>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../image/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../image/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">预算数据为空</view>
+</view>

@@ -1,0 +1,1 @@
+<van-button  class='logout' size="large"  type="error" bind:click="logout">退出登录</van-button>

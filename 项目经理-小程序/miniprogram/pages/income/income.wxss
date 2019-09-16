@@ -1,0 +1,29 @@
+.i-card {
+  margin: 0 16px;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border: 1rpx solid #dddee1;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.f_l {
+  float: left;
+  width: 50%;
+}
+
+.f_r {
+  float: right;
+  width: 50%;
+}
+.f_r_t {
+  float: right;
+  width: 50%;
+  text-align: right;
+  color: #c9302c
+}
+.total{
+  border-top:1px solid #dddee1 
+}

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/projectlist/projectlist",
+    "pages/projectDetail/projectDetail",
+    "pages/functionlist/functionlist",
+    "pages/retreatmaterial/retreatmaterial",
+    "pages/finishproduct/finishproduct",
+    "pages/logout/logout",
+    "pages/authentication/authentication",
+    "pages/productline/productline",
+    "pages/productdetail/productdetail",
+    "pages/picking/picking"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "嘉琪车间小程序",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance":0
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "list": [
+      {
+        "pagePath": "pages/projectlist/projectlist",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_select.png"
+      },
+      {
+        "pagePath": "pages/logout/logout",
+        "text": "登出",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personal_select.png"
+      }
+    ]
+  }
+}

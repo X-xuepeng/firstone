@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "创建生产线",
+  "usingComponents": {
+    "van-field": "../../dist/field/index",
+    "van-button": "../../dist/button/index"
+  }
+  
+}

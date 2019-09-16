@@ -1,0 +1,23 @@
+<view class="weui-cell" style='border-bottom:1px solid #D5D5D6'>
+  <view class="weui-cell__bd">
+    <view class="weui-uploader">
+      <view class="weui-uploader__hd">
+        <view class="weui-uploader__title">报检单照片</view>
+        <view class="weui-uploader__info">{{imageList.length}}/9</view>
+      </view>
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{imageList}}" wx:for-item="image" wx:key="1">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+            </view>
+          </block>
+        </view>
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<i-button bind:click="uploadPicture" type="success"  size="large" class='bottom-button'>{{uploadPictureType}}</i-button>

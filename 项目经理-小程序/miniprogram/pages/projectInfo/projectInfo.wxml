@@ -1,0 +1,40 @@
+<view class="list" >
+  <view class="weui-cell__bd">地址</view>
+  <view class="weui-cell__ft">{{projectDetail.address}}-{{projectDetail.buildingType}}</view>
+</view>
+<view class="list">
+  <view class="weui-cell__bd">姓名</view>
+  <view class="weui-cell__ft">{{projectDetail.name}}</view>
+</view>
+<view class="list">
+  <view class="weui-cell__bd">电话</view>
+  <view class="weui-cell__ft">{{projectDetail.phoneNumber}}</view>
+</view>
+
+<view class="list">
+  <view class="weui-cell__bd">面积</view>
+  <view class="weui-cell__ft">{{projectDetail.area}}平方米</view>
+</view>
+<view class="list">
+  <view class="weui-cell__bd">当前时间</view>
+  <view class="weui-cell__ft">{{projectDetail.createTime}}</view>
+</view>
+<view wx:for="{{personnel}}">
+  <view style='background-color:rgb(247,247,247);color:#000;font-size:14px; padding:6px'>{{item.role}}</view>
+  <!-- <view class='list' wx:for="{{item.list}}"> 
+      <view >
+        {{item.name}}
+      </view>
+        <view style='font-color:#ccc;font-size:12px'>
+        {{item.phoneNumber}}
+      </view>
+  </view> -->
+  <view wx:for="{{item.list}}" style="background-color:rgb(247,247,247)" wx:key="1">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">{{item.name}}</view>
+        <view class="weui-cell__ft">{{item.phoneNumber}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "材料列表",
+  "usingComponents": {
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-button":"../../dist/button/index"
+  }
+}

@@ -1,0 +1,28 @@
+<view wx:for="{{Datas}}" style='padding:10px' wx:key="{{item.ID}}" class="{{isShow}}">
+<van-card
+  title="{{item.Name}}"
+  desc="{{item.Remark}}"
+  price="单位:{{item.Unit}}"
+>
+<view slot="number">
+ <view>
+ x{{item.Numbers}}
+ </view>
+</view>
+  <view slot="tags" style='margin-top:5px;'>
+        <van-tag plain type="danger" custom-class="tag">批号:{{item.BatchCode}}</van-tag>
+        <van-tag plain type="danger" style="padding-left:5px">编码:{{item.Code}}</van-tag>
+      </view>
+</van-card>
+</view>
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../images/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h {{emptyShow}}" wx:if="{{isNull}}">
+    <image src="../../images/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">项目列表为空</view>
+</view>
+
+  

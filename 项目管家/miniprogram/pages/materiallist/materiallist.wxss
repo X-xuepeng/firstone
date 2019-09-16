@@ -1,0 +1,44 @@
+.i-card {
+  margin: 0 16px;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border: 1rpx solid #dddee1;
+  border-radius: 5px;
+}
+
+.i-address-image {
+  vertical-align: middle;
+  height: 18px;
+  width: 18px;
+}
+
+.i-font-text {
+  margin-left: 0.5rem;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.i-customer-name {
+  vertical-align: middle;
+  height: 12px;
+  width: 12px;
+}
+.padding {
+  padding:4px;
+}
+
+.display-inline {
+  display: inline
+}
+.width-50{
+  width: 47%
+}
+.width-60{
+  width: 60%
+}
+.i-customer {
+  margin-left: 0.5rem;
+  font-size: 14px;
+}

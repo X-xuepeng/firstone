@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "指派工人",
+    "usingComponents": {
+      "i-tag": "../../dist/tag/index",
+      "i-button":"../../dist/button/index"
+    }
+}

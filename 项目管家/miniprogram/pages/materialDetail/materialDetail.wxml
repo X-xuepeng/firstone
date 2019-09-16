@@ -1,0 +1,15 @@
+<view class='margin-bottom'>
+<i-cell-group wx:for="{{materialDetail}}" wx:key="{{item.id}}">
+    <i-cell title="{{item.name}}" value="x{{item.quantity}}"></i-cell>
+</i-cell-group>
+<i-panel title="送货详情">
+    <i-input value="{{name}}" title="收货人" autofocus placeholder="名字"  bindchange='name'/>    
+    <i-input value="{{number}}" type="number" title="联系电话" placeholder="请输入手机号" bindchange='phone'/>
+     <picker mode="date" value="{{date}}" start="{{date}}" end="2020-09-01" bindchange="toPayOrder">
+          <i-input value="{{time}}"  title="送货时间" placeholder="选择送货时间" disabled='disabled'/>
+    </picker>
+    <i-input value="{{remark}}" type="textarea" title="详细地址" placeholder="请输入备注" maxlength="50" bindchange='remark'/>
+</i-panel>
+</view>
+
+ <i-button bind:click="sendMessage" type="success"  size="large" class='bottom-button'>通知主材供应商</i-button>

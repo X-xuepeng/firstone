@@ -1,0 +1,42 @@
+<!-- <view class="caption-wrap" wx:if="{{!isNull&&!isError}}">                                             
+  <i-collapse name="{{name}}" wx:for="{{technologyAndSteps}}" wx:key="1">
+    <i-collapse-item title="{{item.technology.name}}" name="name1">
+      <view slot="content">
+        <i-cell-group wx:for="{{item.steps}}" wx:key="1">
+          <i-cell title="{{item.name}}" label="{{item.workHours}}小时" value="{{item.unitQuantity}}"></i-cell>
+        </i-cell-group>
+      </view>
+      <view slot="content">
+        <view class="list">
+          <view class="weui-cell__bd" style='font-size:14px'>{{item.technology.quantity}}</view>
+          <view class="weui-cell__ft" style='color:#c9302c'>￥{{item.technology.unitPrice}}</view>
+        </view>
+      </view>
+    </i-collapse-item>   
+    </i-collapse>
+</view>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../image/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../image/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">预算数据为空</view>
+</view> -->
+
+<i-cell-group wx:for="{{technologyAndSteps}}" wx:key='item.id' wx:if="{{!isNull&&!isError}}" wx:key="1">
+    <i-cell title="{{item.technology.name}}" value="工程量：{{item.technology.quantity}}{{item.technology.unit}}"> </i-cell>    
+</i-cell-group>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../image/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../image/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">预算数据为空</view>
+</view>
+

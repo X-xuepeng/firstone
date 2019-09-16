@@ -1,0 +1,61 @@
+<van-cell-group title="材料" border="true">
+  <van-cell
+    icon="todo-list-o"
+    title="查看投料单明细"
+    value="{{materialStatus}}"
+    is-link
+    bind:click='receive'
+  />
+
+  <van-cell
+    icon="orders-o"
+    title="订单领料"
+    value="领料"
+    is-link
+    bind:click='beginPicking'
+  />
+
+   <van-cell
+    icon="replay"
+    title="退投料单中材料"
+    value="{{replayStatus}}"
+    is-link="{{replayShow}}"
+    bind:click='retreat'
+  />
+</van-cell-group>
+
+<van-cell-group title="入库" border="true">
+  <van-cell
+    icon="records"
+    title="成品入库"
+    value="{{recordsStatus}}"
+    is-link="{{recordsShow}}"
+    bind:click="finishproduct"
+  />
+</van-cell-group>
+
+<van-cell-group title="操作" border="true">
+  <!-- <van-cell
+    icon="orders-o"
+    title="订单已领料"
+    clickable="{{materialComplete}}"
+    bind:click="materialFinish"
+    value="{{materialDesc}}"
+  /> -->
+
+   <van-cell
+    icon="completed"
+    title="订单完结"
+    clickable="{{orderComplete}}"
+    value="{{orderDesc}}"
+    bind:click='complete'
+  />
+
+   <van-cell
+    icon="label-o"
+    title="生产任务单完结"
+    clickable="{{productComplete}}"
+    value="{{productDesc}}"
+    bind:click='productFinsh'
+  />
+</van-cell-group>

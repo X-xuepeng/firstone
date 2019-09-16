@@ -1,0 +1,45 @@
+<view style='padding:2%' wx:for="{{materiallist}}" wx:key="{{item.id}}" wx:if="!{{isNull}}&&!{{isError}}">
+  <view id='{{item.id}}' class="i-card" bindtap='material_detail'>
+
+    <view id='{{item.id}}' class='padding'>
+      <image src='../../images/address.png' class='i-address-image'></image>
+      <text class='i-font-text'>{{item.address}}</text>
+    </view>
+
+    <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../images/order_number.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.number}}</text>
+      </view>
+
+      <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../images/{{item.image}}.png' class='i-customer-name padding'></image>
+        <text class="i-customer" style='color:{{item.color}}'>{{item.status}}</text>
+      </view>
+    </view>
+
+    <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../images/name.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.creator}}</text>
+      </view>
+
+      <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../images/order-time.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.createTime}}</text>
+      </view>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../images/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h" wx:if="{{isNull}}">
+    <image src="../../images/list_empty.png" class="empty_size"></image>
+    <view style="font-size:12px;color:gary">主材送货单列表为空</view>
+</view>

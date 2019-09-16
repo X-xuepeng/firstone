@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "进场照片",
+    "usingComponents": {
+      "i-button": "../../dist/button/index"
+    }
+}

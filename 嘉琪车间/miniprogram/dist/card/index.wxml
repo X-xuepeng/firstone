@@ -1,0 +1,28 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view class="custom-class van-card">
+  <view class="{{ utils.bem('card__header', { center: centered }) }}">
+  <view class='checkbox_center'>
+ <slot name="checkbox" />
+ </view>
+    <view class="van-card__content">
+      <view wx:if="{{ title }}" class="van-card__title title-class">{{ title }}</view>
+      <slot wx:else name="title" />
+
+      <view wx:if="{{ desc }}" class="van-card__desc desc-class">{{ desc }}</view>
+      <slot wx:else name="desc" />
+
+      <slot name="tags" />
+
+      <view class="van-card__bottom">
+        <view wx:if="{{ price || price === 0 }}" class="van-card__price price-class">{{ price }}</view>
+        <view wx:if="{{ originPrice || originPrice === 0 }}" class="van-card__origin-price origin-price-class">{{ currency }} {{ originPrice }}</view>
+        <view  class="van-card__num num-class"><slot name="number" /></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="van-card__footer">
+    <slot name="footer" />
+  </view>
+</view>

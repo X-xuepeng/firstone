@@ -1,0 +1,13 @@
+
+.border-bottom {
+  border-bottom: 1rpx solid #F8F8F8
+}
+.bottom {
+  padding-bottom: 80px;
+}
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  opacity:1;
+}

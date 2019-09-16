@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/orderList/orderList",
+    "pages/orderDetail/orderDetail",
+    "pages/delivery/delivery",
+    "pages/install/install",
+    "pages/logout/logout"
+  ],
+  "window": {
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00B26A",
+    "navigationBarTitleText": "供应商登陆"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "list": [
+      {
+        "pagePath": "pages/orderList/orderList",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_select.png"
+      },
+      {
+        "pagePath": "pages/logout/logout",
+        "text": "登出",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personal_select.png"
+      }
+    ]
+  }
+}

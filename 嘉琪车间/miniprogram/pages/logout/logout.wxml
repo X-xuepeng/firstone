@@ -1,0 +1,11 @@
+  <van-cell
+    icon="todo-list-o"
+    title="创建生产线"
+    value=""
+    is-link
+    bind:click='createProduct'
+  />
+<view class='logout'>
+
+<button class='i-class i-btn i-btn-error i-btn-square i-btn-large' size="large"   hover-class="i-btn-hover" type="danger" bindtap="logout">退出登录</button>
+</view>

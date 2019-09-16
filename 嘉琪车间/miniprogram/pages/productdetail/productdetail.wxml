@@ -1,0 +1,19 @@
+<van-cell-group>
+<van-field
+    value="{{ip}}"
+    label="树莓派IP"
+    disabled
+    border="{{ false }}"
+  />
+
+  <van-field
+    label="描述机器"
+    type="textarea"
+    placeholder="描述机器用途"
+    autosize
+    border="{{ false }}"
+    bind:change="detail"
+  />
+</van-cell-group>
+
+<button class='i-class i-btn i-btn-success i-btn-square i-btn-large' size="large" style="maring-top:10px" bindtap="addProductLine">添加</button>

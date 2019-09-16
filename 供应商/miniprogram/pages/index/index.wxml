@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="icon_container">
+    <image src='../../images/icon.png' class='icon' />
+  </view>
+  <!-- 手机号 -->
+  <view class="weui-cells weui-cells_after-titl phone-top">
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view id='phone' class="weui-label">手机号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入手机号" maxlength='11' bindinput='phoneInput'/>
+      </view>
+  
+    </view>
+  </view>
+<!-- 验证码 -->
+  <view class="weui-cells weui-cells_after-titl">
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view class="weui-label">验证码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入验证码" maxlength='4' bindinput='codeInput'/>
+      </view>
+      <view class="weui-cell__ft">
+        <view class="weui-vcode-btn" style='color:{{color}}' bindtap='sendCode' disabled='{{canClick}}'>{{codeText}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 登录 -->
+<button class="weui-btn" type="primary" bindtap='login'>登录</button>
+</view>

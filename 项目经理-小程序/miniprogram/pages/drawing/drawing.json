@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "图纸",
+      "usingComponents": {
+        "i-title": "../../dist/title/index"
+      }
+}

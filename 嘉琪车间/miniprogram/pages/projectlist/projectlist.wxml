@@ -1,0 +1,76 @@
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:search="onSearch"
+  bind:change="searchChange"
+  shape="round"
+  label="型号"
+> 
+<view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+
+<view style='padding:2%' wx:for="{{searchList}}" wx:key="{{item.id}}" class="{{isShow}}">
+  <view id='{{item.BillNO}}' class="i-card" bindtap='projectDetail'>
+
+    <view id='{{item.id}}' class='padding'>
+      <image src='../../images/product_name.png' class='i-address-image'></image>
+      <text class='i-font-text'>{{item.PruductName}}</text>
+    </view>
+    <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../images/name.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.Creater}}</text>
+      </view>
+
+      <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../images/brand.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.Brand}}</text>
+      </view>
+    </view>
+
+     <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../images/order-number.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.BillNO}}</text>
+      </view>
+
+      <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../images/xinghao.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.Model}}</text>
+      </view>
+    </view>
+
+
+    <view>
+      <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../images/product_number.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.ICMOBillNo}}</text>
+      </view>
+       
+       <view class='padding width-50 display-inline' style='float:right'>
+        <image src='../../images/order-time.png' class='i-customer-name padding'></image>
+        <text class="i-customer">{{item.CreateDate}}</text>
+      </view>
+    </view>
+
+    <view>
+       <view class='padding width-50 display-inline' style='float:left'>
+        <image src='../../images/icon_status.png' class='i-customer-name padding'></image>
+        <text class="i-customer" style='color:{{item.color}}'>{{item.status}}</text>
+      </view>
+    </view> 
+    <view>
+    </view>
+  </view>
+</view>
+
+<view class="w_h" wx:if="{{isError}}">
+    <image src="../../images/net_error.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">网络出错</view>
+</view>
+
+<view class="w_h {{emptyShow}}" wx:if="{{isNull}}">
+    <image src="../../images/list_empty.png" class="error_size"></image>
+    <view style="font-size:12px;color:gary">项目列表为空</view>
+</view>

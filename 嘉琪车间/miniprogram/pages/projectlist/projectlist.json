@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "投料单",
+  "usingComponents": {
+  "van-search": "../../dist/search/index"
+  }
+}

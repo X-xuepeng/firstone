@@ -1,0 +1,27 @@
+.kind-list-item {
+  margin: 20rpx 0;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+.kind-list-item:first-child {
+  margin-top: 0;
+}
+.kind-list-text{
+  flex: 1;
+}
+.index-bd {
+  padding: 0 30rpx 40rpx;
+}
+.container{
+    display:flex;
+     display: -webkit-flex;
+    justify-content:center;
+    align-items: center;
+}
+.center {
+  width:150px;
+  height: 108px;
+  margin-top: 100px;
+  display: block;
+}

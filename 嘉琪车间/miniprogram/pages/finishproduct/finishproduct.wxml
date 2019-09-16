@@ -1,0 +1,42 @@
+<view class='background'>
+<view wx:for="{{Datas}}" style='padding:10px' wx:key="{{item.Code}}" class="{{isShow}}">
+<van-card
+  title="{{item.Name}}"
+  desc="{{item.Code}}"
+  id="{{item.Code}}"
+>
+<view slot="checkbox">
+ <van-checkbox value="{{ item.checked }}" class="checkbox" bind:change="onClickChange" id='{{item.Code}}' checked-color="#d9534f"></van-checkbox>
+</view>
+<view id='{{item.Code}}' bindtap='changeCount' slot="number">
+ <view >
+ x{{item.showCount}}
+ </view>
+</view>
+</van-card>
+
+<view style='height:60px;background-color:rgb(242,242,242)'></view>
+</view>
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">更改数量</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" type="number" bindinput="inputChange" class="input" placeholder="更改数量"></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+</view>
+</view>
+<van-submit-bar
+  price="{{totalCount}}"
+  button-text="成品入库"
+  bind:submit="onClickButton"
+>
+<van-checkbox value="{{ checked }}" class="left" bind:change="onChange" checked-color="#d9534f">全选</van-checkbox>
+</van-submit-bar>
+
